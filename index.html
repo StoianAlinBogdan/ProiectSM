@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Proiect SM</title>
+    <style>
+
+        body {
+            background-color: antiquewhite;
+        }
+
+        main {
+            margin-left: 35%;
+            margin-top: 5%;
+        }
+    
+        .controls {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 2px solid black;
+            border-radius: 20px;
+            width: 50%;
+            height: 200px;
+            background-color: rgba(255, 166, 0, 0.836); 
+        }
+
+        #start, #stop {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        #startB, #stopB {
+            background-color: antiquewhite;
+            width: 100px;
+            height: 40px;
+            border-radius: 15px;
+            border: 2px solid black;
+            font-size: large;
+            font-weight: bold;
+        }
+
+        .titlu {
+            width: 40%;
+            height: 50px;
+            font-size: large;
+            font-weight: bold;
+            background-color: rgba(255, 166,0 , 0.836);
+            border-radius: 10px;
+            margin-bottom: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            margin-left: 5%;
+        }
+    </style>
+</head>
+<body>
+    <main>    
+        <div class="titlu">
+            Welcome to SmartGambling
+        </div>
+        <div class="controls">
+            <!—formular cu butonul care porneste procesul de generare al numerelor-->
+            <form method="POST" action="/proiect" id="start">
+                <input type=submit name="proiect" value="Start" id="startB"/>
+            </form>    
+            <!—formular cu butonul care opreste procesul de generare al numerelor-->
+
+            <form method="POST" action="/termina_proiect" id="stop">
+                <input type=submit name="termina" value="Stop" id="stopB"/>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
